@@ -1,0 +1,229 @@
+.backdrop {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+}
+
+.modal {
+    position: absolute;
+    padding: 40px 40px 40px 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background-color: var(--color-white);
+    overflow: auto;
+
+}
+
+.modal__close-button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+
+
+    transition-property: border-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.modal__close-button:hover,
+.modal__close-button:focus {
+    fill: var(--color-svg-content-hover);
+    border: 1px solid var(--color-svg-content-hover);
+
+}
+
+.form__title {
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+}
+
+.form__label {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: #757575;
+    margin-bottom: 4px;
+}
+
+.form__label:active {
+    border-color: var(--color-text-hover);
+    fill: var(--color-text-hover);
+}
+
+.form__container {
+    position: relative;
+}
+
+.form__input {
+    width: 100%;
+    height: 40px;
+    padding: 12px 12px 12px 32px;
+    border: var(--border-line);
+    border-radius: 4px;
+    outline: none;
+    margin-bottom: 10px;
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__input:focus {
+    border: var(--border-line-hover);
+}
+
+.form__icon {
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    fill: currentColor;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__input:focus+.form__icon {
+    fill: var(--color-svg-content-hover);
+}
+
+.form__textarea {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    width: 100%;
+    height: 120px;
+    border: var(--border-line);
+    border-radius: 4px;
+    padding: 12px 16px;
+    resize: none;
+}
+
+.form__textarea:active {
+    border-color: var(--color-text-hover);
+}
+
+/*Chackbox*/
+.secure__conditions {
+    margin-top: 20px;
+    margin-left: 8px;
+}
+
+.label__checkbox {
+    display: flex;
+    align-items: center;
+}
+
+
+.label__secure {
+    font-weight: 400;
+    line-height: 1.71;
+    color: var(--color-secondary);
+    margin-left: 8px;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+
+
+}
+
+.conditions {
+    color: var(--color-text-hover);
+    text-decoration: underline;
+}
+
+/*Checked*/
+.checkbox {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.custom__checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 4px;
+}
+
+.checkbox:checked+.custom__checkbox {
+    background-image: url(../images/check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border-color: transparent;
+    background-color: var(--color-text-hover);
+    width: 16px;
+    height: 15px;
+
+}
+
+/*modal-button*/
+
+.modal__button {
+    display: block;
+    justify-items: center;
+
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 52px;
+
+    cursor: pointer;
+    color: var(--color-white);
+    background-color: var(--color-text-hover);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__button:focus,
+.modal__button:hover {
+    background-color: var(--color-text-hover);
+
+}
